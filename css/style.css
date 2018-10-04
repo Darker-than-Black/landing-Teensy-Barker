@@ -101,6 +101,12 @@ header {
   position: relative;
 }
 
+@media screen and (max-width: 992px) {
+  .header__content--btn {
+    border-width: .05rem !important;
+  }
+}
+
 .header__content--btn:before {
   content: '';
   display: block;
@@ -172,10 +178,18 @@ main {
 .user-manual__title {
   font-weight: 500;
   text-align: center;
-  max-width: 60%;
+  max-width: 70%;
   margin: 0 auto;
   font-size: 3.3vw;
   line-height: 4vw;
+}
+
+@media screen and (max-width: 992px) {
+  .user-manual__title {
+    font-size: 5vw;
+    line-height: 5vw;
+    max-width: 100%;
+  }
 }
 
 .user-manual__list {
@@ -185,6 +199,12 @@ main {
   padding-left: 40px;
 }
 
+@media screen and (max-width: 992px) {
+  .user-manual__list {
+    margin: 4.5vw 4vw;
+  }
+}
+
 .user-manual__list li {
   margin: 0 0 3.5vw 0;
   counter-increment: my-awesome-counter;
@@ -192,6 +212,12 @@ main {
   font-size: 2.5vw;
   font-weight: 500;
   line-height: 5vw;
+}
+
+@media screen and (max-width: 992px) {
+  .user-manual__list li {
+    font-size: 4vw;
+  }
 }
 
 .user-manual__list li:before {
@@ -226,6 +252,14 @@ main {
   line-height: 4vw;
 }
 
+@media screen and (max-width: 992px) {
+  .characteristic__title {
+    font-size: 5vw;
+    line-height: 5vw;
+    max-width: 100%;
+  }
+}
+
 .characteristic__title span {
   font-weight: bold;
 }
@@ -250,6 +284,12 @@ main {
   color: #96228b;
   font-weight: bold;
   font-size: 1.5vw;
+}
+
+@media screen and (max-width: 992px) {
+  .characteristic__table tr:first-child td {
+    min-height: 2rem;
+  }
 }
 
 .characteristic__table tr:first-child td:nth-child(2) {
@@ -303,7 +343,7 @@ main {
   font-weight: 500;
   font-size: 1.5vw;
   line-height: 1.75vw;
-  margin: .5rem 0;
+  margin: .5rem .75rem .5rem 0;
 }
 
 .characteristic__table tr td:first-child .icon {
@@ -349,6 +389,14 @@ main {
   margin: 0 auto;
   font-size: 3.3vw;
   line-height: 4vw;
+}
+
+@media screen and (max-width: 992px) {
+  .tariff__title {
+    font-size: 5vw;
+    line-height: 5vw;
+    max-width: 100%;
+  }
 }
 
 .tariff__plans {
@@ -431,8 +479,8 @@ main {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 88.2%;
-  height: 77.3%;
+  width: 88.4%;
+  height: 77.5%;
   position: absolute;
   top: 0;
   margin: 23.7% 5.6%;
@@ -462,6 +510,12 @@ main {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .tariff__plans--name {
+    font-size: 3vw;
+  }
+}
+
 .tariff__plans--price {
   font-size: 2vw;
   min-height: 10vh;
@@ -470,6 +524,12 @@ main {
 @media screen and (min-width: 1400px) {
   .tariff__plans--price {
     font-size: 1.4vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .tariff__plans--price {
+    min-height: 3vh;
   }
 }
 
@@ -524,6 +584,14 @@ main {
   margin: 0 auto;
   font-size: 3.3vw;
   line-height: 4vw;
+}
+
+@media screen and (max-width: 992px) {
+  .ask__title {
+    font-size: 5vw;
+    line-height: 5vw;
+    max-width: 100%;
+  }
 }
 
 .ask__clients {
@@ -591,6 +659,14 @@ main {
   line-height: 4vw;
 }
 
+@media screen and (max-width: 992px) {
+  .footer__title {
+    font-size: 5vw;
+    line-height: 5vw;
+    max-width: 100%;
+  }
+}
+
 .footer__form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -624,6 +700,12 @@ main {
           box-shadow: inset 0 0 4vw 0 rgba(255, 255, 255, 0.75);
   position: relative;
   color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+  .form-art {
+    display: none;
+  }
 }
 
 .form-art__title {
@@ -668,11 +750,25 @@ main {
           box-shadow: 0px 0px 4vw 0px rgba(0, 0, 0, 0.75);
 }
 
+@media screen and (max-width: 992px) {
+  .form-connect {
+    margin: 0 auto;
+    padding: 3vw 5vw;
+    width: 80%;
+  }
+}
+
 .form-connect label {
   font-weight: 500;
   font-size: 1.8vw;
   opacity: .5;
   margin: 1vw 0 0;
+}
+
+@media screen and (max-width: 992px) {
+  .form-connect label {
+    font-size: 2.8vw;
+  }
 }
 
 .form-connect input,
@@ -690,6 +786,14 @@ main {
   font-size: 1.7vw;
   font-weight: bold;
   padding: .25rem .75rem;
+}
+
+@media screen and (max-width: 992px) {
+  .form-connect input,
+  .form-connect textarea,
+  .form-connect button {
+    font-size: 2.8vw;
+  }
 }
 
 .form-connect textarea {
