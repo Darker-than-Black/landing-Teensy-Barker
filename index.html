@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Teensy Barker</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.cssy"> -->
@@ -14,6 +14,15 @@
 
     <script src="js/libs.min.js" defer></script>
     <script src="js/main.js" defer></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126951991-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-126951991-1');
+	</script>
 </head>
 <body>
     <header>
@@ -30,11 +39,12 @@
     </header>
     <main>
         <section class="wrapper user-manual">
-            <h2 class="user-manual__title wow slideInLeft" data-wow-duration="1s">Впевнись, що гості побачать твій заклад серед рекомендацій</h2>
+            <h2 class="user-manual__title wow slideInLeft" data-wow-duration="1s">Будь впевнений , що гості побачать твій заклад серед рекомендацій</h2>
             <ol class="user-manual__list">
                 <li class="wow slideInLeft" data-wow-duration="1s">Заповни інформацію про свій заклад.</li>
                 <li class="wow slideInLeft" data-wow-duration="1s">Отримай код закладу та лінк.</li>
-                <li class="wow slideInLeft" data-wow-duration="1s">Надавай та редагуй інформацію в живому часі.</li>
+                <li class="wow slideInLeft" data-wow-duration="1s">Надавай та редагуй інформацію в режимі реального часу.</li>
+                <li class="wow slideInLeft" data-wow-duration="1s">А Teensy розповість всім, хто поряд!</li>
             </ol>
         </section>
         <section class="wrapper characteristic">
@@ -51,7 +61,7 @@
                         <div class="icon">
                             <i class="fas fa-image"></i>
                         </div>
-                        <p>Повний контроль інформації, що відображається про заклад</p>
+                        <p>Повний контроль інформації, що відображається</p>
                     </td>
                     <td><i class="fas fa-check"></i></td>
                     <td><i class="fas fa-check"></i></td>
@@ -84,7 +94,7 @@
                         <div class="icon">
                                 <i class="fas fa-pencil-alt"></i>
                         </div>
-                        <p>Планування відображення контенту</p>
+                        <p>Планування контенту, контроль його публікування та відображення </p>
                     </td>
                     <td><i class="fas fa-check"></i></td>
                     <td><i class="fas fa-check"></i></td>
@@ -95,7 +105,7 @@
                         <div class="icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <p>Аудиторія, котра шукає куди зараз завітати</p>
+                        <p>Аудиторія, котра шукає куди завітати саме зараз</p>
                     </td>
                     <td><i class="fas fa-check"></i></td>
                     <td></td>
@@ -187,7 +197,7 @@
                 <input type="text" id="phone">
                 <label for="mail">E-mail</label>
                 <input type="mail" id="mail">
-                <label for="text">Ваше питання</label>
+                <label for="text">Які питання вас цікавлять</label>
                 <textarea name="" id="text"></textarea>
                 <button>Відправити</button>
             </form>
