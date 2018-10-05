@@ -14,13 +14,15 @@
 
     <script src="js/libs.min.js" defer></script>
     <script src="js/main.js" defer></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127000052-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-        gtag('config', 'UA-126951991-1');
-    </script>
+	  gtag('config', 'UA-127000052-1');
+	</script>
 </head>
 <body>
     <header>
@@ -28,7 +30,7 @@
             <div class="header__content">
                 <h1 class="header__content--title wow bounceInLeft" data-wow-duration="1s">Я <span>Teensy Barker</span> <br> Я привожу гостей</h1>
                 <h4 class="header__content--text wow slideInLeft" data-wow-duration="2s">Приєднуйся та розповідай тисячам користувачів поряд з тобою чому вони мають до тебе завцітати</h4>
-                <button class="header__content--btn wow slideInUp" data-wow-duration="1.75s">Дізнатись більше</button>
+                <button class="header__content--btn wow slideInUp header__btn" data-wow-duration="1.75s">Дізнатись більше</button>
             </div>
             <div class="header__banner wow slideInRight" data-wow-duration="2s">
                 <img src="./img/phone.png" alt="">
@@ -188,18 +190,94 @@
                 <h2 class="form-art__title">Я <span>Teensy Barker</span> <br> Я привожу гостей</h2>
                 <img src="./img/boy.png" alt="" class="form-art__img">
             </div>
-            <form action="" class="form-connect">
+            <form action="" class="form-connect" id="form-ask">
                 <label for="name">Ім'я</label>
-                <input type="text" id="name">
+                <input type="text" id="name" required>
                 <label for="phone">Номер телефону</label>
-                <input type="text" id="phone">
+                <input type="text" id="phone" required>
                 <label for="mail">E-mail</label>
-                <input type="mail" id="mail">
+                <input type="mail" id="mail" required>
                 <label for="text">Які питання вас цікавлять</label>
-                <textarea name="" id="text"></textarea>
-                <button>Відправити</button>
+                <textarea name="" id="text" required></textarea>
+                <button type="submit" form="form-ask" id="send">Відправити</button>
             </form>
         </div>
     </footer>
+
+
+    <div class="modal_windows">
+    	<!-- button with secton "TARIFF" -->
+		<div class="modal">
+		  <div class="modal-content">
+		    <div class="modal-body row">
+				<span class="close fas fa-times"></span>
+				<div class="modal-body">
+					<h3 class="modal__title">Abbey Klaassen 1</h3>
+					<h5 class="modal__position">President, 360i New York</h5>
+					<div class="modal__text">
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+					</div>
+				</div>      
+		    </div>
+		  </div>
+		</div>
+		<div class="modal">
+		  <div class="modal-content">
+		    <div class="modal-body row">
+				<span class="close fas fa-times"></span>
+				<div class="modal-body">
+					<h3 class="modal__title">Abbey Klaassen 2</h3>
+					<h5 class="modal__position">President, 360i New York</h5>
+					<div class="modal__text">
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+					</div>
+				</div>      
+		    </div>
+		  </div>
+		</div>
+		<div class="modal">
+		  <div class="modal-content">
+		    <div class="modal-body row">
+				<span class="close fas fa-times"></span>
+				<div class="modal-body">
+					<h3 class="modal__title">Abbey Klaassen 3</h3>
+					<h5 class="modal__position">President, 360i New York</h5>
+					<div class="modal__text">
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+					</div>
+				</div>      
+		    </div>
+		  </div>
+		</div>
+
+
+		<!-- Button on HEADER -->
+		<div class="modal">
+		  <div class="modal-content">
+		    <div class="modal-body row">
+				<span class="close fas fa-times"></span>
+				<div class="modal-body">
+					<h3 class="modal__title">Modal on header</h3>
+					<h5 class="modal__position">text</h5>
+					<div class="modal__text">
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
+					</div>
+				</div>      
+		    </div>
+		  </div>
+		</div>
+	</div>
 </body>
 </html>
