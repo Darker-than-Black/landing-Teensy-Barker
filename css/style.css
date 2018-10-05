@@ -92,6 +92,7 @@ header {
 
 .header__content--btn {
   border: 0.25rem solid #fff;
+  text-decoration: none;
   background: transparent;
   color: #fff;
   padding: 2% 4%;
@@ -168,7 +169,7 @@ header {
 }
 
 main {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 .user-manual {
@@ -180,7 +181,7 @@ main {
   text-align: center;
   max-width: 70%;
   margin: 0 auto;
-  font-size: 3.3vw;
+  font-size: 3vw;
   line-height: 4vw;
 }
 
@@ -193,7 +194,7 @@ main {
 }
 
 .user-manual__list {
-  margin: 4.5vw 9vw;
+  margin: 4.5vw 8vw;
   counter-reset: my-awesome-counter;
   list-style: none;
   padding-left: 40px;
@@ -206,10 +207,10 @@ main {
 }
 
 .user-manual__list li {
-  margin: 0 0 3.5vw 0;
+  margin: 0 0 2.5vw 0;
   counter-increment: my-awesome-counter;
   position: relative;
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   font-weight: 500;
   line-height: 5vw;
 }
@@ -229,8 +230,8 @@ main {
   left: -webkit-calc(-1 * 5vw - 10px);
   left: calc(-1 * 5vw - 10px);
   line-height: 4.5vw;
-  width: 4.5vw;
-  height: 4.5vw;
+  width: 4vw;
+  height: 4vw;
   top: 0;
   background: -webkit-gradient(linear, left top, right top, from(#96228b), to(#ff840f));
   background: -webkit-linear-gradient(left, #96228b, #ff840f);
@@ -479,11 +480,11 @@ main {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 88.4%;
-  height: 77.5%;
-  position: absolute;
-  top: 0;
-  margin: 23.7% 5.6%;
+      width: 88.4%;
+    height: 78.5%;
+    position: absolute;
+    top: 0;
+    margin: 21.7% 5.6%;
 }
 
 .tariff__plans--name, .tariff__plans--price {

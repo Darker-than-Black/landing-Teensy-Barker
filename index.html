@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script-->
     <script src="js/libs.min.js" defer></script>
     <script src="js/main.js" defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -29,8 +30,8 @@
         <div class="wrapper header">
             <div class="header__content">
                 <h1 class="header__content--title wow bounceInLeft" data-wow-duration="1s">Я <span>Teensy Barker</span> <br> Я привожу гостей</h1>
-                <h4 class="header__content--text wow slideInLeft" data-wow-duration="2s">Приєднуйся та розповідай тисячам користувачів поряд з тобою чому вони мають до тебе завцітати</h4>
-                <button class="header__content--btn wow slideInUp header__btn" data-wow-duration="1.75s">Дізнатись більше</button>
+                <h4 class="header__content--text wow slideInLeft" data-wow-duration="2s">Приєднуйся та розповідай тисячам користувачів поряд з тобою чому вони мають до тебе завітати</h4>
+                <a class="header__content--btn wow slideInUp header__btn" data-wow-duration="1.75s" href="#footer__form">Дізнатись більше</a>
             </div>
             <div class="header__banner wow slideInRight" data-wow-duration="2s">
                 <img src="./img/phone.png" alt="">
@@ -183,22 +184,24 @@
             </article>
         </section>
     </main>
-    <footer class="wrapper footer">
+    <footer class="wrapper footer" >
         <h2 class="footer__title">Зв’язатись з нами</h2>
-        <div class="footer__form">
+        <div class="footer__form" id="footer__form">
             <div class="form-art">
                 <h2 class="form-art__title">Я <span>Teensy Barker</span> <br> Я привожу гостей</h2>
                 <img src="./img/boy.png" alt="" class="form-art__img">
             </div>
-            <form action="" class="form-connect" id="form-ask">
+
+            <form action="http://ezoterik21.com/amo_integration/tests/teensy/send_email.php" class="form-connect" id="form-ask">
                 <label for="name">Ім'я</label>
-                <input type="text" id="name" required>
+                <input type="text" id="name" class="form-connect-name" required>
                 <label for="phone">Номер телефону</label>
-                <input type="text" id="phone" required>
+                <input type="tel" id="phone" class="form-connect-phone" placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                 <label for="mail">E-mail</label>
-                <input type="mail" id="mail" required>
+                <input type="mail" id="mail"  class="form-connect-email"required>
                 <label for="text">Які питання вас цікавлять</label>
-                <textarea name="" id="text" required></textarea>
+                <textarea name="" id="text"  class="form-connect-questions" required></textarea>
                 <button type="submit" form="form-ask" id="send">Відправити</button>
             </form>
         </div>
@@ -212,14 +215,18 @@
 		    <div class="modal-body row">
 				<span class="close fas fa-times"></span>
 				<div class="modal-body">
-					<h3 class="modal__title">Abbey Klaassen 1</h3>
-					<h5 class="modal__position">President, 360i New York</h5>
-					<div class="modal__text">
-						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
-						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
-						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
-						<p>As President of the agency’s largest office and headquarters, Abbey plays a critical role on 360i’s executive steering committee guiding direction and strategic decisions for the company. She’s responsible for the growth and culture of the agency’s New York location – home to 550 employees and numerous marquee accounts. As part of her remit, Abbey leads national practices including Marketing, New Business, and Amazon Marketing, and acts as executive sponsor for key client accounts.</p>
-					</div>
+					<form action="http://ezoterik21.com/amo_integration/tests/teensy/send_email.php" class="form-connect-long" id="form-ask">
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" class="form-connect-name" required>
+                        <label for="phone">Номер телефону</label>
+                        <input type="tel" id="phone" class="form-connect-phone" placeholder="123-456-7890"
+           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        <label for="mail">E-mail</label>
+                        <input type="mail" id="mail"  class="form-connect-email"required>
+                        <label for="text">Які питання вас цікавлять</label>
+                        <textarea name="" id="text"  class="form-connect-questions" required></textarea>
+                        <button type="submit" form="form-ask" id="send">Відправити</button>
+                    </form>
 				</div>      
 		    </div>
 		  </div>
