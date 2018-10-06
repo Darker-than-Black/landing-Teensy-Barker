@@ -729,7 +729,8 @@ main {
   left: 13%;
 }
 
-.form-connect {
+.form-connect,
+.form-connect-long {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -751,6 +752,16 @@ main {
           box-shadow: 0px 0px 4vw 0px rgba(0, 0, 0, 0.75);
 }
 
+.form-connect-long {
+  box-shadow: none;
+  border: none;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  padding: 4vw 0;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 992px) {
   .form-connect {
     margin: 0 auto;
@@ -759,7 +770,8 @@ main {
   }
 }
 
-.form-connect label {
+.form-connect label,
+.form-connect-long label {
   font-weight: 500;
   font-size: 1.8vw;
   opacity: .5;
@@ -767,19 +779,25 @@ main {
 }
 
 @media screen and (max-width: 992px) {
-  .form-connect label {
+  .form-connect label,
+  .form-connect-long label {
     font-size: 2.8vw;
   }
 }
 
 .form-connect input,
-.form-connect textarea {
+.form-connect textarea,
+.form-connect-long input,
+.form-connect-long textarea {
   height: 3vw;
 }
 
 .form-connect input,
 .form-connect textarea,
-.form-connect button {
+.form-connect button,
+.form-connect-long input,
+.form-connect-long textarea,
+.form-connect-long button  {
   border: none;
   outline: none;
   border-bottom: 2px solid #e4e4e4;
@@ -792,21 +810,29 @@ main {
 @media screen and (max-width: 992px) {
   .form-connect input,
   .form-connect textarea,
-  .form-connect button {
+  .form-connect button,
+  .form-connect-long input,
+  .form-connect-long textarea,
+  .form-connect-long button  {
     font-size: 2.8vw;
   }
 }
 
-.form-connect textarea {
+.form-connect textarea,
+.form-connect-long textarea {
   resize: none;
 }
+.form-connect-long textarea {
+  height: 20vh;
+}
 
-.form-connect button {
+.form-connect button,
+.form-connect-long button {
   background: transparent;
   width: 60%;
   margin: 2vw auto;
   cursor: pointer;
-  border: .3rem solid transparent;
+  border: .35rem solid transparent;
   -webkit-border-image: -webkit-gradient(linear, left top, right top, from(#96228b), to(#ff840f));
   -webkit-border-image: -webkit-linear-gradient(left, #96228b, #ff840f);
        -o-border-image: -o-linear-gradient(left, #96228b, #ff840f);
@@ -814,6 +840,16 @@ main {
           border-image: linear-gradient(to right, #96228b, #ff840f);
   border-image-slice: 1;
   position: relative;
+}
+
+.form-connect-long button:hover {
+  color: #fff;
+  background: linear-gradient(to right, #96228b, #ff840f);
+  -webkit-transition: all .5s ease-in-out;
+     -moz-transition: all .5s ease-in-out;
+      -ms-transition: all .5s ease-in-out;
+       -o-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
 }
 
 .form-connect button:before {
@@ -827,7 +863,7 @@ main {
   background: linear-gradient(to right, #96228b, #ff840f);
   position: absolute;
   top: -2%;
-  left: -2%;
+  left: -1.1%;
   z-index: -1;
 }
 
@@ -845,21 +881,12 @@ main {
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes hoverBtn_form {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 102.5%;
-  }
-}
-
 @keyframes hoverBtn_form {
   0% {
     width: 0%;
   }
   100% {
-    width: 102.5%;
+    width: 102%;
   }
 }
 
@@ -869,8 +896,6 @@ main {
   display: none;
   position: fixed;
   z-index: 99;
-  /*padding-top: 6%;
-  padding-bottom: 6%;*/
   top: 0;
   font-family: 'Lora', serif;
   width: 100%;
@@ -882,11 +907,9 @@ main {
 .modal-content {
   margin: 5vh auto;
   position: relative;
-  /*margin: auto;*/
   padding: 0;
   border: none;
   width: 60%;
-  /* height: 100%; */
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation: animatetop 0.4s ease-in-out;

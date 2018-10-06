@@ -41,56 +41,69 @@ $(document).ready(function(){
 
 
 var btn_section = document.getElementsByClassName('tariff')[0],
-	modal_windows_section = document.getElementsByClassName('modal_windows')[0],
-	document_body = document.body;
-var quantity_windows = btn_section.childElementCount;
+	document_body = document.body,
+	close = document.getElementsByClassName('close')[0],
+	modal = document.getElementsByClassName('modal')[0];
+var quantity_windows = btn_section.childElementCount; // подсчет количества кнопок
 var modal_window = [];
-//for(var i=0;i<quantity_windows;i++) {
+// цыкл нужен что бы создать ассоцыативный массив путей к кнопкам
+for(var i=0;i<quantity_windows;i++) {
 	modal_window.push({ 
-		enter: document.getElementsByClassName('tariff__plans--btn'),
-		close: document.getElementsByClassName('close'),
-		modal: document.getElementsByClassName('modal')
+		enter: document.getElementsByClassName('tariff__plans--btn')[i],
 	})
-//};
-
-modal_window.push({ 
-	enter: document.getElementsByClassName('header__btn'),
-	close: document.getElementsByClassName('close'),
-	modal: document.getElementsByClassName('modal')
-});
+};
 
 btn_section.onclick = function (e) {
 	for(var i=0;i<quantity_windows;i++) {
 		if(e.path[0] == modal_window[i].enter) {
-			console.log('yes')
-			modal_window[i].modal.style.display = "block";
+			modal.style.display = "block";
 			document_body.style.overflow = "hidden";
 			return false;
 		}
 	}
 };
-modal_windows_section.onclick = function (e) {
-	for(var i=0;i<quantity_windows+1;i++) {
-		if(e.path[0] == modal_window[i].close){
-			modal_window[i].modal.style.display = "none";
-			document_body.style.overflow = "auto";
-			return false;
-		}
-	}
+// ивент клика на крестик в модальном окне
+close.onclick = function (e) {
+	modal.style.display = "none";
+	document_body.style.overflow = "auto";
+	return false;
 };
-// window.onclick = function(e) {
-//     for(var i=0;i<quantity_windows+1;i++) {
-// 		if(e.target == modal_window[i].modal){
-// 			modal_window[i].modal.style.display = "none";
-// 			document_body.style.overflow = "auto";
-// 			return false;
-// 		}
-// 	}
-//};
+// ивент клика мыши за областю модального окна, что бы оно зкарылось,
+// для тех кто не знает для чего придемали крестик
+window.onclick = function(e) {
+	if(e.target == modal){
+		modal.style.display = "none";
+		document_body.style.overflow = "auto";
+		return false;
+ 	}
+};
 
-// modal_window[3].enter.onclick = function (e) {
-// 	//console.log(e.path)
-// 	modal_window[3].modal.style.display = "block";
-// 	document_body.style.overflow = "hidden";
-// 	return false;
-//};
+// Smooth scroll to anchor
+$('.header__btn')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          //$target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            //$target.focus();
+          };
+        });
+      }
+    }
+  });
